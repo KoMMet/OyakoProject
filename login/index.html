@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン - UtoWA -</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <div id="app">
+                <h2>ログイン</h2>
+                <!-- ↓画面遷移がうまくいかない -->
+                <template v-if="visible === 'login-form'"> 
+                    <form class="login-form">
+                        <input type="text" placeholder="メールアドレス" id="mail" v-model="mail"/>
+                        <input type="password" placeholder="パスワード" id="password" v-model="password"/>
+                        <button @click="login">ログイン</button>
+                        <p class="message">アカウントの作成は <a href="#" @click="changeForm" id="visibleRegister">こちら</a></p>
+                        <p class="message">パスワードを忘れてしまった方は <a href="#" @click="changeForm" id="visibleReset">こちら</a></p>
+                    </form>
+                </template> 
+                <template v-else-if="visible === 'register-form'"> 
+                    <form class="register-form">
+                        <input type="text" placeholder="なまえ"/>
+                        <input type="text" placeholder="メールアドレス"/>
+                        <input type="password" placeholder="パスワード"/>
+                        <button @click="register">登録</button>
+                        <p class="message">登録済みの方は <a href="#" @click="changeForm" id="visibleLogin">こちら</a></p>
+                    </form>
+                </template> 
+                <template v-else-if="visible === 'reset-form'"> 
+                    <form class="reset-form">
+                        <input type="text" placeholder="メールアドレス"/>
+                        <input type="password" placeholder="パスワード"/>
+                        <input type="password" placeholder="確認用パスワード"/>
+                        <button @click="reset">リセット</button>
+                        <p class="message">ログインは <a href="#" @click="changeForm" id="visibleLogin">こちら</a></p>
+                    </form>
+                </template> 
+                <pre>{{ $data }}</pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
