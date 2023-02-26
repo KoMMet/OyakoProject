@@ -1,5 +1,5 @@
-<template>
-  <v-app id="inspire">
+<!--<template>
+   <v-app id="inspire">
     <v-system-bar>
       <v-spacer></v-spacer>
       <v-icon>mdi-square</v-icon>
@@ -73,7 +73,7 @@
       </v-responsive>
     </v-app-bar>
 
-    <v-main><!--  --></v-main>
+    <v-main></v-main>
 
     <v-navigation-drawer location="right">
       <v-list>
@@ -117,3 +117,4 @@
     },
   }
 </script>
+ -->

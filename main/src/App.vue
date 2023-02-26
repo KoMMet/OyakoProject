@@ -1,24 +1,7 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
     <v-main>
-      <MainFrame/>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
-
-<script>
-import MainFrame from './components/MainFrame.vue'
-
-export default {
-  name: 'App',
-  
-  // コンポーネント呼び出し
-  components: {
-    MainFrame
-  },
-
-  data: () => ({
-    //
-  }),
-}
-</script>

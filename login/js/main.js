@@ -23,8 +23,6 @@ const app = Vue.createApp({
                 this.visible = 'reset-form'
             }
             
-
-            // $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
         }
     }
 })
