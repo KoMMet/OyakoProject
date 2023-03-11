@@ -18,12 +18,12 @@
         color="grey-darken-2"
       >
         <v-tab
-          v-for="[title, link] in links"
-          :key="link"
+          v-for="[icon, title, link] in links"
+          :key="icon"
           :title="title"
           :to="link"
         >
-          {{ title }}
+          <v-icon>{{ icon }}</v-icon>{{ title }}
         </v-tab>
       </v-tabs>
       <v-spacer></v-spacer>
@@ -83,11 +83,11 @@
   export default {
     data: () => ({
       links: [
-        ['Home', '/'],
-        ['Dashboard', '/'],
-        ['Community','/community'],
-        ['Famiry','/'],
-        ['Announce','/'],
+        ['mdi-home', 'home', '/'],
+        ['', 'Dashboard', '/'],
+        ['','Community','/community'],
+        ['','Famiry_Tree','/famiryTree'],
+        ['','Announce','/'],
       ]
     }),
   }

@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../views/pages/CommunityPage.vue'),
   },
   {
+    path: '/famiryTree',
+    name: 'famiryTree',
+    component: () => import('../views/pages/FamiryTreePage.vue'),
+  },
+  {
     path: '/userList',
     name: 'userList',
     component: () => import('../views/utils/UserList.vue')
